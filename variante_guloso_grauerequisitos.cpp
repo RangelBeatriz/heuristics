@@ -67,7 +67,7 @@ int main()
 
 	 Grafo G = BibGrafos::Grafo::ConstruirDeArquivoBinario("n2000p50_G2.gbin");
 
-    int k = G.ObterGrauMinimo();
+    int k = G.ObterGrauMinimo()/2;
 
 	VetorRequisitos R = VetorRequisitos::GerarConstante(&G,k);
 	VetorRequisitos Raux = R; //Criar uma cópia de trabalho para preservar R
