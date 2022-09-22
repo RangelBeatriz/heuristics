@@ -64,12 +64,11 @@ int main()
 		grau[v.Indice()] = G.Grau(v);
 	}
 
-	auto start = high_resolution_clock::now();
 	while (faltaDominar.size() > 0)
 	{
 		Vertice v = *faltaDominar.begin();
 		for(Vertice w: faltaDominar){
-			if(Raux[v] < Raux[w]]){
+			if(Raux[v] < Raux[w]){
 				v = w;
 			}
 
@@ -92,13 +91,8 @@ int main()
 		}
 
 		faltaDominar.erase(v);
-		//G->RemoverVertice(v);		
 	}
-	auto stop = high_resolution_clock::now();
 
-	auto duration = duration_cast<microseconds>(stop-start);
-	
-	cout << "Tempo em microsegundos: " << duration.count() << endl;
 	cout << "Tamanho:" << S.size() << endl;
 
 	

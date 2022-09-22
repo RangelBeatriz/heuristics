@@ -29,7 +29,6 @@ int main()
 	set<Vertice> faltaDominar(G.Vertices.begin(), G.Vertices.end());
 	set<Vertice> S;
 	
-	auto start = high_resolution_clock::now()
 	while (faltaDominar.size() > 0){
 		
 		Vertice v = *faltaDominar.begin();
@@ -51,11 +50,8 @@ int main()
 		}
 
 		faltaDominar.erase(v);
-		G.RemoverVertice(v);
 	}
-	auto stop = high_resolution_clock::now()
 	
-	cout << "Inicio: " << start.count() << endl;
 	cout << "Tamanho:" << endl;
 	cout << S.size() << endl;
 	
