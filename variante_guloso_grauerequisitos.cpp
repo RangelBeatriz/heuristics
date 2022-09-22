@@ -87,7 +87,6 @@ int main()
         fator[v.Indice()] = calc_fator(Raux[v], grau[v.Indice()], faltaDominar.size());
     }
 
-	auto start = high_resolution_clock::now();
 	while (faltaDominar.size() > 0)
 	{
 		Vertice v = *faltaDominar.begin();
@@ -112,11 +111,7 @@ int main()
 
 		faltaDominar.erase(v);
 	}
-	auto stop = high_resolution_clock::now();
 
-	auto duration = duration_cast<microseconds>(stop-start);
-	
-	cout << "Tempo em microsegundos: " << duration.count() << endl;
 	cout << "Tamanho:" << S.size() << endl;
 
 	G->SalvarArquivoBinario(arq);
